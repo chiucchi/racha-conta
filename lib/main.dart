@@ -279,7 +279,7 @@ class _screenTwoState extends State<screenTwo> {
                 ),
               ),  // segunda box
               Container (
-                height: 300.0,
+                height: 500.0,
                 margin: EdgeInsets.fromLTRB(20.0, 50.0, 20.0, 0.0),
                 decoration: BoxDecoration(
                   color: Colors.indigo[50],
@@ -300,7 +300,9 @@ class _screenTwoState extends State<screenTwo> {
                           ),
                         ),
                         onChanged: (value) {
-                          totalBebida = double.parse(value);
+                          setState(() {
+                            totalBebida = double.parse(value);
+                          });
                         },
                       ),
                     ),
@@ -317,7 +319,9 @@ class _screenTwoState extends State<screenTwo> {
                           ),
                         ),
                         onChanged: (value) {
-                          quantBebintes =  int.parse(value);
+                          setState(() {
+                            quantBebintes =  int.parse(value);
+                          });
                         },
                       ),
                     ),
@@ -325,8 +329,10 @@ class _screenTwoState extends State<screenTwo> {
                       padding: const EdgeInsets.fromLTRB(8.0, 12.0, 8.0, 8.0),
                       child: RaisedButton(
                         onPressed: () {
-                          totalBase = (totalConta - totalBebida) / quantPessoas; // calculo preco base
-                          contaBebinte = totalBase + (totalBebida/quantBebintes); // valor pra quem bebeu (preco base + divisao da bebida)
+                          setState(() {
+                            totalBase = (totalConta - totalBebida) / quantPessoas; // calculo preco base
+                            contaBebinte = totalBase + (totalBebida/quantBebintes); // valor pra quem bebeu (preco base + divisao da bebida)
+                          });
                         },
                         child: Text("CALCULAR",
                             style: TextStyle(
