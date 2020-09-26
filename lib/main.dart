@@ -238,7 +238,7 @@ class _screenTwoState extends State<screenTwo> {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text("R\$0.0",
+                        child: Text("R\$${totalBase.toStringAsFixed(2)}",
                             style: TextStyle (
                               fontSize: 25.0,
                               color: Colors.black,
@@ -268,7 +268,7 @@ class _screenTwoState extends State<screenTwo> {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text("R\$0.0",
+                        child: Text("R\$${contaBebinte.toStringAsFixed(2)}",
                             style: TextStyle (
                               fontSize: 25.0,
                               color: Colors.black,
